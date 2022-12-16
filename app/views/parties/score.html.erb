@@ -1,0 +1,10 @@
+	<div class="container_perso">
+		<h1> Découvrez votre résultat ! </h1>
+		<div>
+			<p class=" fs-2 text"><%= @response %></p>
+			<p class=" fs-2 text">Ton score est de <%= @score_total %>!</p>
+			<p class="fs-2 text">Ton meilleur score est de <%= @best_score %>!</p>
+			<p class=" fs-2 text">Tu as déjà joué <%= @number_of_parties %> fois! Tu peux encore rejouer <%=5-@number_of_parties%> fois!</p>
+			<%= link_to "Rejouer", root_path, class: "lien"%>
+		</div>
+</div>

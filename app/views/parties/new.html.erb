@@ -1,0 +1,20 @@
+<div class="container_perso">
+<h1 class="text-center">Nouvelle partie</h1>
+
+<ol>
+    <% @ten_letters_list.each do|letter| %>
+        <li><%= letter %></li>
+    <% end %>
+</ol>
+
+
+<form action="/score" method="post" data-turbo="false" class="form form-perso">
+    <label>Trouve le mot le plus long possible!</label>
+    <input class="form-control p-3 mb-3" type="text" name="solution" placeholder="Ecrivez quelque chose!">
+    <input class="form-control" name="letters" type="hidden" value="<%= @ten_letters_list.join("") %>">
+    <input class="form-control" type="submit" value="Je valide!">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+
+<%= link_to "Log out", destroy_user_session_path, class: "lien", data: {turbo_method: :delete} %>
+</div>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'new', to: 'games#new'
-  post 'score', to: 'games#score'
+  root to: 'parties#new'
+  get 'score', to: 'parties#score'
+  post 'score', to: 'parties#score'
 end
