@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ten_letters_list: MyString
+  word: MyString
+  available: false
+
+two:
+  ten_letters_list: MyString
+  word: MyString
+  available: false
