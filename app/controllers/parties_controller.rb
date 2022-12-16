@@ -1,5 +1,6 @@
 class PartiesController < ApplicationController
   before_action :authenticate_user!
+
   def new
     consonne = ["b", "c", "d", "f", "g", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "z"]
     voyelle = ["a","e","i","o","u"]
@@ -13,7 +14,7 @@ class PartiesController < ApplicationController
     @solution = params[:solution]
     @ten_letters_list = params[:letters].chars
     @score_total = 0
-    self.show_response
+    show_response
     @scores = []
     @scores << @score_total
     @best_score = @scores.max
